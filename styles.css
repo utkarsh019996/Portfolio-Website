@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --primary-color: #000000;
+    --secondary-color: #fe4e05;
+    --secondary-color-dark: #bf3900;
+    --text-dark: #0d1319;
+    --text-light: #9ca3af;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.section-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 1rem;
+}
+.section-title{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+.section-title span{
+    color: var(--secondary-color);
+}
+.section-subtitle{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+}
+img{
+    width: 100%;
+}
+.btn{
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.btn:hover{
+    background-color: var(--secondary-color-dark);
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+body{
+    color: #ffffff;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    padding: 1rem;
+}
+nav .nav-logo a{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+nav .nav-logo a span{
+    color: var(--secondary-color);
+}
+header{
+    height: 100vh;
+    background-image: url(assets/header-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-container{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.header-container p{
+    color: var(--text-light);
+    max-width: 400px;
+    margin: 1rem 0;
+}
+.header-container p span{
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    margin-right: 1rem;
+}
+.header-container h1{
+    font-size: 3rem;
+    line-height: 3rem;
+    font-weight: 800;
+}
+.action-btns{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.action-btns .video{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+.action-btns .video .play{
+    height: 50px;
+    width: 50px;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    border-radius: 100%;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+}
+.action-btns .video span{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.action-btns .video:hover .play{
+    background-color: var(--secondary-color-dark);
+}
+.about,.project{
+    background-color: var(--text-dark);
+}
+.about-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.about-image,.about-content{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.about-image img{
+    max-width: 350px;
+}
+.about-details{
+    padding: 2rem 0;
+    color: var(--text-light);
+    text-align: center;
+}
+.service,footer{
+    background-color: var(--primary-color);
+}
+.service-grid,.project-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 1rem;
+    margin-top: 5rem;
+}
+.service-card{
+    display: grid;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--text-dark);
+    border-radius: 5px;
+}
+.service-card i{
+    font-size: 1.5rem;
+}
+.service-card h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.service-card p{
+    color: var(--text-light);
+}
+.service-card .read-more{
+    width: max-content;
+    padding: 0.5rem 1rem;
+    color: var(--text-light);
+    font-size: 0.8rem;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+.project-card{
+    display: grid;
+    place-content: center;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.project-card img{
+    transition: scale 0.3s;
+}
+.project-card:hover img{
+    scale: 1.1;
+}
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 2rem;
+}
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.footer-details{
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin: 2rem 0;
+    display: grid;
+    gap: 1rem;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.social-icons .icon{
+    padding: 0.5rem;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: var(--secondary-color);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.social-icons .icon:hover{
+    background-color: var(--secondary-color-dark);
+}
+.footer-form{
+    display: grid;
+    gap: 1rem;
+}
+.footer-form :is(input, textarea){
+    padding: 1rem;
+    background-color: var(--text-dark);
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.footer-form textarea{
+    resize: none;
+}
+.footer-form button{
+    width: max-content;
+}
+
+@media (min-width: 640px){
+    .section-title{
+        font-size: 2.5rem;
+    }
+    .header-container p{
+        margin: 2rem 0;
+    }
+    .header-container h1{
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+    .action-btns{
+        gap: 2rem;
+    }
+    .about-container{
+        flex-direction: row;
+    }
+    .about-content{
+        align-items: flex-start;
+    }
+    .about-details{
+        text-align: left;
+    }
+    .service-grid,.project-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (min-width: 768px){
+    .header-container h1{
+        font-size: 5rem;
+        line-height: 5rem;
+    }
+    .service-grid,.project-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
+    
+}
